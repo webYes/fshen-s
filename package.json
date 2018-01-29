@@ -1,0 +1,31 @@
+{
+  "name": "fshen-s",
+  "version": "1.0.0",
+  "description": "fshen前端代码",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8888",
+    "dev_mac" : "WEBPACK_ENV=dev webpack-dev-server --inline --port 8888",
+    "dist" : "set WEBPACK_ENV=online && webpack -p",
+    "dist_mac" : "WEBPACK_ENV=online webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webYes/fshen-s.git"
+  },
+  "author": "webYes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webYes/fshen-s/issues"
+  },
+  "homepage": "https://github.com/webYes/fshen-s#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.19.1",
+    "webpack": "^1.15.0"
+  },
+  "dependencies": {}
+}
