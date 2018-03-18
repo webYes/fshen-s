@@ -4,10 +4,10 @@
   "description": "fshen前端代码",
   "main": "index.js",
   "scripts": {
-    "dev" : "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8888",
-    "dev_mac" : "WEBPACK_ENV=dev webpack-dev-server --inline --port 8888",
-    "dist" : "set WEBPACK_ENV=online && webpack -p",
-    "dist_mac" : "WEBPACK_ENV=online webpack -p"
+    "dev": "WEBPACK_ENV=dev && webpack-dev-server --inline --port 8888",
+    "dev_win": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8888",
+    "dist": "WEBPACK_ENV=online && webpack -p",
+    "dist_win": "set WEBPACK_ENV=online && webpack -p"
   },
   "repository": {
     "type": "git",
@@ -22,10 +22,16 @@
   "devDependencies": {
     "css-loader": "^0.28.9",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.11.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^2.30.1",
     "style-loader": "^0.19.1",
-    "webpack": "^1.15.0"
+    "url-loader": "^0.5.8",
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^1.16.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "hogan.js": "^3.0.2"
+  }
 }
