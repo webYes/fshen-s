@@ -16,7 +16,7 @@ var _fs = {
             data: param.data || '',
             success: function(res){
                 //请求成功
-                if(0 === res.staus){
+                if(0 === res.status){
                     typeof param.success == 'function' && param.success(res.data, res.msg);
                 }
                 //没有登录状态，需要强制登录
@@ -25,11 +25,11 @@ var _fs = {
                 }
                 //请求数据错误
                 else if(1 === res.status){
-                    typeof param.error == 'function' && param.error(res.msg);
+                    typeof param.error === 'function' && param.error(res.msg);
                 }
             },
             error: function(err){
-                typeof param.error == 'function' && param.error(err.status);
+                typeof param.error === 'function' && param.error(err.status);
             }
         });
     },
@@ -39,7 +39,7 @@ var _fs = {
     },
     //获取url参数(正则写法)
     getUrlParam: function(name){
-      var reg = new RegExp('(^|&)'+name + '=([^&]*)(&|$)');
+      var reg = new RegExp('(^|&)'+ name + '=([^&]*)(&|$)');
       var result = window.location.search.substr(1).match(reg);
       return result ? decodeURIComponent(result[2]) : null;
     },
@@ -75,8 +75,8 @@ var _fs = {
     },
     //
     //统一登录处理
-    doLogin  : function(){
-        window.location.href = './login.html？redirect='+encodeURIComponent(window.location.href);
+    doLogin: function(){
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
     },
     //跳转回主页面
     goHome: function(){

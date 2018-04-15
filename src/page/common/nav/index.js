@@ -15,9 +15,9 @@ var nav = {
         return this;
     },
     bindEvent : function(){
-        //登录点击事件
-        $('.js-login').click(function (){
-           _fs.doLogin();
+        // 登录点击事件
+        $('.js-login').click(function(){
+            _fs.doLogin();
         });
         //注册点击事件
         $('.js-register').click(function(){

@@ -3,7 +3,7 @@
  */
 require('./index.css');
 require('page/common/nav-simple/index.js');
-require('util/fs.js');
+var _fs = require('util/fs.js');
 $(function(){
     var type = _fs.getUrlParam('type') || 'default',
         $element = $('.' + type + '-success').show();
